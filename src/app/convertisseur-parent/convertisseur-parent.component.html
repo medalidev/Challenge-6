@@ -1,0 +1,4 @@
+<input type="text" [(ngModel)]="text">
+
+<!-- {{message}} -->
+<app-convertisseur-child [parentData]="text" (childEvent)="message=$event"></app-convertisseur-child>

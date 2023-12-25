@@ -1,0 +1,12 @@
+<!-- <app-actor></app-actor> -->
+
+<ul>
+    <li *ngFor="let actor of listActors; index as i"><app-actor  [firstName]="actor.firstName"  [lastName]="actor.lastName" 
+        [index]='i'  [list]="listActors" (listFavoris)="fActor=$event"></app-actor></li>
+    <!-- <li *ngFor="let listActor of listActors; index as i">{{listActor.lastName +" "+ listActor.firstName}}</li> -->
+</ul>
+
+<ul>
+    <li *ngFor="let favoris of fActor; index as i">{{favoris.fN+favoris.lN}}</li>
+</ul>
+
